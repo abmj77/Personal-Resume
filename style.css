@@ -1,0 +1,256 @@
+/* Import Fonts and Font Awesome (manually handled) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/* Global Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #343a40 !important; /* Dark background using Bootstrap's color */
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Column */
+.left-column {
+    width: 35%;
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-right: 1px solid #ccc;
+}
+
+/* Name and Role */
+.name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+.name span {
+    display: block;
+    font-weight: 400;
+}
+
+.role {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 16px;
+}
+
+.email {
+    text-decoration: none;
+    color: #444;
+}
+
+/* Section Titles */
+.section {
+    margin: 15px 0 30px 0;
+}
+
+.section h2 {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0 0 15px -8px;
+    border-radius: 5px;
+}
+
+/* Lists */
+.section ul {
+    padding-left: 0;
+}
+
+.list-styled {
+    list-style: none;
+}
+
+.section ul li {
+    padding: 6px 0;
+    font-size: 14px;
+    color: #444;
+}
+
+.section ul li i {
+    margin-right: 8px;
+    color: #333;
+}
+
+.margin-list {
+    margin-left: 15px;
+}
+
+/* Social Media Links */
+.social-links a {
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff; /* Bootstrap primary */
+}
+
+/* Education and Experience Items */
+.item {
+    margin-bottom: 15px;
+}
+
+.date {
+    font-weight: bold;
+    color: #333;
+}
+
+.degree {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.university, .details {
+    font-size: 13px;
+    color: #777;
+}
+
+.item h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.company {
+    font-weight: 600;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Right Column */
+.right-column {
+    width: 65%;
+    padding: 30px;
+}
+
+.right-column .section h2 {
+    margin: 0 0px 10px -12px;
+}
+
+.right-column p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Bootstrap Cards for Projects */
+/* Used Bootstrap classes: card, card-body, btn, btn-outline-primary */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+    .left-column, .right-column {
+        width: 100%;
+        border-right: none;
+    }
+
+    .left-column {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .profile-photo img {
+        max-width: 120px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .role {
+        font-size: 14px;
+    }
+
+    .section h2 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .profile-photo img {
+        max-width: 100px;
+    }
+
+    .name {
+        font-size: 18px;
+    }
+
+    .section ul li {
+        font-size: 13px;
+    }
+
+    .right-column {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 10px;
+    }
+
+    .left-column, .right-column {
+        padding: 15px;
+    }
+
+    .profile-photo img {
+        max-width: 80px;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+
+    .role {
+        font-size: 12px;
+    }
+
+    .section h2 {
+        font-size: 12px;
+    }
+
+    .section ul li, .right-column p {
+        font-size: 12px;
+    }
+
+    .item h3 {
+        font-size: 14px;
+    }
+}
